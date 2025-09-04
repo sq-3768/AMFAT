@@ -10,15 +10,14 @@ Remote sensing image super-resolution (RSISR) plays a key role in recovering spa
 ![amfat.png](https://github.com/sq-3768/AMFAT/blob/main/AMFAT.png)
 
 ## Installation & Requirements
-This project follows the environment setup and usage of **HAT**. Please refer to the HAT repository for detailed installation instructions (Python, PyTorch, dependencies, dataset preparation, and training/testing pipelines): <https://github.com/XPixelGroup/HAT>.  
-Our implementation is integrated in the same style (configs in `*.yml`, architecture file `amfat_arch.py`, pretrained weights `amfat_x4.pth`).
+This project follows the environment setup and usage of [HAT](https://github.com/XPixelGroup/HAT). Please refer to the HAT repository for detailed installation instructions (Python, PyTorch, dependencies, dataset preparation, and training/testing pipelines)
+Our implementation is integrated in the same style (configs in `*.yml`, architecture file `amfat_arch.py`, pretrained weights [amfat_x4](https://pan.baidu.com/s/1GcnM-6HFSSlZihiP_HM5Fg) code: tavp.)
 
 ## Datasets
-- **AID** (Aerial Image Dataset): <https://captain-whu.github.io/AID/>
-- **UC Merced Land Use Dataset**: <https://weegee.vision.ucmerced.edu/datasets/landuse.html>
-- **NWPU-RESISC45**: <https://gcheng-nwpu.github.io/>
-- **RSSCN7**: <https://sites.google.com/view/zhouwx/dataset> *(mirror: <https://figshare.com/articles/dataset/RSSCN7_Image_dataset/7006946>)*
-
+- [AID](https://captain-whu.github.io/AID/) (Aerial Image Dataset)
+- [UC Merced Land Use Dataset](https://weegee.vision.ucmerced.edu/datasets/landuse.html) 
+- [NWPU-RESISC45](https://gcheng-nwpu.github.io/) 
+- [RSSCN7](https://sites.google.com/view/zhouwx/dataset)
 ## How To Train
 ```bash
 python hat/train.py -opt train_x4.yml
@@ -30,4 +29,4 @@ python hat/test.py -opt test_x4.yml
 ```
 
 ## Acknowledgements
-This code is built on **HAT** (<https://github.com/XPixelGroup/HAT>) and **BasicSR** (<https://github.com/XPixelGroup/BasicSR>). Thanks for these excellent open-source works!
+This code is built on [HAT](https://github.com/XPixelGroup/HAT) and [BasicSR](https://github.com/XPixelGroup/BasicSR). Thanks for these excellent open-source works!
