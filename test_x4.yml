@@ -24,7 +24,7 @@ network_g:
 path:
   pretrain_network_g: ~
   strict_load_g: true
-  param_key_g: params_ema
+  param_key_g: 'params_ema'
 
 
 # validation settings
@@ -42,6 +42,7 @@ val:
       type: calculate_ssim
       crop_border: 4
       test_y_channel: true
+
 
 
 
