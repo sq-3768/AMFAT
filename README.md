@@ -1,6 +1,5 @@
 # Adaptive Multi-Scale Feature Aggregation Transformer Network for Single Remote Sensing Image Super-Resolution
 
-## Authors
 Official PyTorch implementation of the paper “Adaptive Multi-Scale Feature Aggregation Transformer Network for Single Remote Sensing Image Super-Resolution” (**Accepted by Geo-spatial Information Science**).  
 **Authors:** Zhiqi Zhang, Qi Sun, Zhiwei Ye, Chuang Liu, Mi Wang
 
