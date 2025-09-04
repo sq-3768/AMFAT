@@ -1,7 +1,7 @@
 # TODO
 # general settings
 name: 001_UCMerced_x4_AMFAT_test
-model_type: HATModel
+model_type: HATModel # or SRModel
 scale: 4
 num_gpu: 1  # set num_gpu: 0 for cpu mode
 manual_seed: 7
@@ -42,5 +42,6 @@ val:
       type: calculate_ssim
       crop_border: 4
       test_y_channel: true
+
 
 
