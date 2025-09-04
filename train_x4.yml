@@ -1,0 +1,94 @@
+# TODO
+# general settings
+name: 001_UCMerced_x4_AMFAT_train
+model_type: HATModel
+scale: 4
+num_gpu: 1  # set num_gpu: 0 for cpu mode
+manual_seed: 7
+
+# dataset and data loader settings
+datasets:
+  train:
+    name: UCMerced-dataset
+    dataroot_gt: datasets/UCMerced-dataset/train/HR_x4
+    dataroot_lq: datasets/UCMerced-dataset/train/LR_x4
+    type: PairedImageDataset
+    io_backend:
+      type: disk
+
+    gt_size: 192
+    use_hflip: true
+    use_rot: true
+
+    # data loader
+    num_worker_per_gpu: 6
+    batch_size_per_gpu: 4
+    dataset_enlarge_ratio: 1
+    prefetch_mode: ~
+
+  val:
+    name: UCMerced-dataset
+    type: PairedImageDataset
+    dataroot_gt: datasets/UCMerced-dataset/val/HR_x4
+    dataroot_lq: datasets/UCMerced-dataset/val/LR_x4
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: AMFAT
+  window_size: 8
+# path
+path:
+  pretrain_network_g: ~
+  strict_load_g: true
+  resume_state: ~
+
+# training settings
+train:
+  ema_decay: 0.999
+  optim_g:
+    type: Adam
+    lr: !!float 2e-4
+    weight_decay: 0
+    betas: [0.9, 0.99]
+
+  scheduler:
+    type: MultiStepLR
+    milestones: [105000, 157500, 210000, 262500]
+    gamma: 0.5
+
+  total_iter: 315000
+  warmup_iter: -1  # no warm up
+
+  # losses
+  pixel_opt:
+    type: L1Loss
+    loss_weight: 1.0
+    reduction: mean
+
+# validation settings
+val:
+  val_freq: !!int 210
+  save_img: false
+  pbar: True
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: true
+    ssim: # metric name, can be arbitrary
+      type: calculate_ssim
+      crop_border: 4
+      test_y_channel: true
+
+# logging settings
+logger:
+  print_freq: 210
+  save_checkpoint_freq: !!int 210
+  use_tb_logger: true
+  wandb:
+    project: ~
+    resume_id: ~
+
