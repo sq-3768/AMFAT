@@ -14,8 +14,8 @@ This project follows the environment setup and usage of [HAT](https://github.com
 Our implementation is integrated in the same style (configs in `*.yml`, architecture file `amfat_arch.py`, pretrained weights [amfat_x4](https://pan.baidu.com/s/1GcnM-6HFSSlZihiP_HM5Fg) code: tavp.)
 
 ## Datasets
-- [AID](https://captain-whu.github.io/AID/) (Aerial Image Dataset)
-- [UC Merced Land Use Dataset](http://weegee.vision.ucmerced.edu/datasets/landuse.html) 
+- [AID](https://captain-whu.github.io/AID/)
+- [UCMerced](http://weegee.vision.ucmerced.edu/datasets/landuse.html) 
 - [NWPU-RESISC45](https://gcheng-nwpu.github.io/) 
 - [RSSCN7](https://sites.google.com/view/zhouwx/dataset)
 ## How To Train
