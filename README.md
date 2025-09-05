@@ -15,7 +15,7 @@ Our implementation is integrated in the same style (configs in `*.yml`, architec
 
 ## Datasets
 - [AID](https://captain-whu.github.io/AID/) (Aerial Image Dataset)
-- [UC Merced Land Use Dataset](https://weegee.vision.ucmerced.edu/datasets/landuse.html) 
+- [UC Merced Land Use Dataset](http://weegee.vision.ucmerced.edu/datasets/landuse.html) 
 - [NWPU-RESISC45](https://gcheng-nwpu.github.io/) 
 - [RSSCN7](https://sites.google.com/view/zhouwx/dataset)
 ## How To Train
